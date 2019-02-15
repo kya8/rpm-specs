@@ -1,17 +1,18 @@
 Name:           compton-next
-Version:        5
-Release:        0.2.RC4%{?dist}
+Version:        5.1
+Release:        1%{?dist}
 Summary:        A compositor for X11.
 
 License:        MIT
 URL:            https://www.github.com/yshui/compton
-Source0:        %{url}/archive/v%{version}-rc4.tar.gz#/compton-%{version}-rc4.tar.gz
+Source0:        %{url}/archive/v%{version}.tar.gz#/compton-%{version}.tar.gz
 
 
 BuildRequires:  meson
 
 BuildRequires : gcc
 BuildRequires : pkgconfig(x11)
+BuildRequires : pkgconfig(x11-xcb)
 BuildRequires : pkgconfig(xcomposite)
 BuildRequires : pkgconfig(xfixes)
 BuildRequires : pkgconfig(xdamage)
@@ -22,17 +23,18 @@ BuildRequires : pkgconfig(xext)
 BuildRequires : pkgconfig(xrandr)
 BuildRequires : pkgconfig(xinerama)
 BuildRequires : pkgconfig(libconfig) >= 1.4
-BuildRequires : pcre-devel
+BuildRequires : pkgconfig(libpcre)
 BuildRequires : pkgconfig(libdrm)
-BuildRequires : mesa-libGL-devel
+BuildRequires : pkgconfig(gl)
 BuildRequires : pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(pixman-1)
-BuildRequires : asciidoc
-BuildRequires : desktop-file-utils
 
 BuildRequires:  libev-devel
 BuildRequires:  pkgconfig(libxdg-basedir)
 BuildRequires:  pkgconfig(xpresent)
+
+BuildRequires : asciidoc
+BuildRequires : desktop-file-utils
 
 Requires:   xorg-x11-utils
 
@@ -40,10 +42,10 @@ Conflicts:  compton
        
 
 %description
-Fork of the original compton, a compositor for X11.
+Compton-next is an active fork of the original compton, a compositor for X11.
 
 %prep
-%autosetup -n compton-%{version}-rc4
+%autosetup -n compton-%{version}
 
 
 %build
@@ -61,8 +63,8 @@ Fork of the original compton, a compositor for X11.
 desktop-file-validate %{buildroot}/%{_datadir}/applications/compton.desktop
 
 %files
-%license LICENSES COPYING
-%doc README.md
+%license LICENSES/* COPYING
+%doc README.md compton.sample.conf
 %{_bindir}/compton
 %{_bindir}/compton-convgen.py
 %{_bindir}/compton-trans
