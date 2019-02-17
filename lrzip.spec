@@ -125,7 +125,7 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm {} +
 
 
 %files
-%doc %{_docdir}/%{name}/*
+%doc %{_pkgdocdir}/*
 %{_bindir}/*
 %{_mandir}/man1/*.1.gz
 %{_mandir}/man5/*.5.gz

@@ -29,18 +29,18 @@ A KMS Emulator in C.
 %{set_build_flags}
 %make_build STRIP=0 
 
-gzip man/*
+%{__gzip} man/*
 
 
 %install
 
-install -D -m 755 -t %{buildroot}/%{_bindir}/ bin/vlmcs*
-install -D -m 644 -t %{buildroot}/%{_sysconfdir}/ etc/vlmcsd.*
+%{__instal} -D -m 755 -t %{buildroot}/%{_bindir}/ bin/vlmcs*
+%{__instal} -D -m 644 -t %{buildroot}/%{_sysconfdir}/ etc/vlmcsd.*
 
-install -D -m 644 -t %{buildroot}/%{_mandir}/man1/ man/vlmcs.1.gz
-install -D -m 644 -t %{buildroot}/%{_mandir}/man7/ man/vlmcsd.7.gz
-install -D -m 644 -t %{buildroot}/%{_mandir}/man8/ man/vlmcsd.8.gz
-install -D -m 644 -t %{buildroot}/%{_mandir}/man5/ man/vlmcsd.ini.5.gz
+%{__instal} -D -m 644 -t %{buildroot}/%{_mandir}/man1/ man/vlmcs.1.gz
+%{__instal} -D -m 644 -t %{buildroot}/%{_mandir}/man7/ man/vlmcsd.7.gz
+%{__instal} -D -m 644 -t %{buildroot}/%{_mandir}/man8/ man/vlmcsd.8.gz
+%{__instal} -D -m 644 -t %{buildroot}/%{_mandir}/man5/ man/vlmcsd.ini.5.gz
 
 %files
 %{_bindir}/vlmcs*

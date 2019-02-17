@@ -50,17 +50,17 @@ developing applications that use %{name}.
 
 %build
 # replace hardcoded flags
-sed '\?^CFLAGS:=?s?=.*$?=%{build_cflags}? ; \?^LDFLAGS=?s?=.*$?=%{build_ldflags}?' Makefile
+%{__sed} '\?^CFLAGS:=?s?=.*$?=%{build_cflags}? ; \?^LDFLAGS=?s?=.*$?=%{build_ldflags}?' Makefile
 
 %make_build USE_JCTVC=Y
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
+%{__rm} -rf $RPM_BUILD_ROOT
 
-install -D -m 755 -t %{buildroot}/%{_bindir}/ bpgenc bpgdec bpgview
-install -D -m 644 -t %{buildroot}/%{_includedir}/ libbpg.h bpgenc.h
-install -D -m 644 -t %{buildroot}/%{_libdir}/ libbpg.a
+%{__instal} -D -m 755 -t %{buildroot}/%{_bindir}/ bpgenc bpgdec bpgview
+%{__instal} -D -m 644 -t %{buildroot}/%{_includedir}/ libbpg.h bpgenc.h
+%{__instal} -D -m 644 -t %{buildroot}/%{_libdir}/ libbpg.a
 
 
 %files

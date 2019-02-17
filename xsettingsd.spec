@@ -29,10 +29,10 @@ sound effects.
 scons xsettingsd dump_xsettings
 
 %install
-install -Dm0755 xsettingsd		%{buildroot}%{_bindir}/xsettingsd
-install -Dm0755 dump_xsettings		%{buildroot}%{_bindir}/dump_xsettings
-install -Dm0644 xsettingsd.1		%{buildroot}%{_mandir}/man1/xsettingsd.1
-install -Dm0644 dump_xsettings.1	%{buildroot}%{_mandir}/man1/dump_xsettings.1
+%{__instal} -Dm0755 xsettingsd		%{buildroot}%{_bindir}/xsettingsd
+%{__instal} -Dm0755 dump_xsettings		%{buildroot}%{_bindir}/dump_xsettings
+%{__instal} -Dm0644 xsettingsd.1		%{buildroot}%{_mandir}/man1/xsettingsd.1
+%{__instal} -Dm0644 dump_xsettings.1	%{buildroot}%{_mandir}/man1/dump_xsettings.1
 
 %files
 %{_bindir}/*
