@@ -13,7 +13,6 @@ Source0:        %{url}/archive/svn%{svn_rev}.tar.gz#/%{name}-svn%{svn_rev}.tar.g
 BuildRequires:  gcc
 BuildRequires:  make
 BuildRequires:  coreutils
-BuildRequires:  gzip
 
 # Requires:       
 
@@ -29,8 +28,6 @@ A KMS Emulator in C.
 %{set_build_flags}
 %make_build STRIP=0 
 
-%{__gzip} man/*
-
 
 %install
 
@@ -42,6 +39,7 @@ A KMS Emulator in C.
 %{__install} -D -m 644 -t %{buildroot}/%{_mandir}/man8/ man/vlmcsd.8.gz
 %{__install} -D -m 644 -t %{buildroot}/%{_mandir}/man5/ man/vlmcsd.ini.5.gz
 
+
 %files
 %{_bindir}/vlmcs*
 %config(noreplace) %{_sysconfdir}/vlmcsd.*
@@ -49,5 +47,6 @@ A KMS Emulator in C.
 %{_mandir}/man7/*.7.gz
 %{_mandir}/man8/*.8.gz
 %{_mandir}/man5/*.5.gz
+
 
 %changelog
