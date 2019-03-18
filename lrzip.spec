@@ -1,5 +1,5 @@
-%global commit 9819e861a5e1d089e1830120db97103d4c07e094
-%global commit_date 20180918
+%global commit 79f505165be5524a52fcaaada7aee8a62978fbf9
+%global commit_date 20190224
 %global shortcommit %(c=%{commit};echo ${c:0:7})
 
 %ifarch %{ix86}
@@ -8,7 +8,7 @@
 %bcond_with assembler
 %endif
 
-# JIT in bundled libzpaq is supported on x86 and x86_64 only, bug #1309772
+# JIT in bundled libzpaq is supported on x86 and x86_64 only
 %ifarch %{ix86} x86_64
 %bcond_without jit
 %else
@@ -37,12 +37,10 @@ BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  glibc-common
 
-BuildRequires:  coreutils
 BuildRequires:  findutils
-BuildRequires:  bash
 
-BuildRequires:  zlib-devel
-BuildRequires:  bzip2-devel
+BuildRequires:  pkgconfig(zlib)
+BuildRequires:  pkgconfig(bzip2)
 BuildRequires:  lzo-devel
 
 BuildRequires:  %{_bindir}/pod2man
@@ -52,9 +50,7 @@ BuildRequires:  nasm
 %endif
 
 
-
-# Bundled zpaq <http://mattmahoney.net/dc/zpaq.html>. lrzip does not work with
-# newer zpaq versions.
+# Bundles zpaq. lrzip does not work with newer zpaq versions.
 Provides:       bundled(zpaq) = 5.01
 
 %description
@@ -113,12 +109,6 @@ NOCONFIGURE=1 ./autogen.sh
 %install
 %make_install
 find $RPM_BUILD_ROOT -name '*.la' -exec rm {} +
-# Install devel documentation here because %%doc and direct installation
-# cannot be used at the same same
-# install -d $RPM_BUILD_ROOT%%{docdir_devel}
-# install -m 0644 -t $RPM_BUILD_ROOT%%{docdir_devel} \
-#    decompress_demo.c liblrzip_demo.c
-
 
 
 %ldconfig_scriptlets libs
