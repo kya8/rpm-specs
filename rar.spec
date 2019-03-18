@@ -1,12 +1,14 @@
+#TODO: handle unrar alternatives
+
 # do not strip and make debug packages
 %global         __strip /bin/true
 %global         debug_package %{nil}
 
-%bcond_without unrar
+%bcond_with unrar
 
 Name:           rar
-Summary:        Program to create and manage RAR archives
-Version:        5.6.1
+Summary:        Command line tools to create and manage RAR archives
+Version:        5.7.0
 Release:        1%{?dist}
 License:        Proprietary
 URL:            https://www.rarlab.com
