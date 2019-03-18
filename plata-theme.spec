@@ -17,6 +17,8 @@ BuildRequires:  inkscape >= 0.91
 BuildRequires:  sassc >= 3.3
 BuildRequires:  libxml2
 
+# BuildRequires:  fdupes
+
 Requires:       gtk-murrine-engine >= 0.98.1
 Recommends:     google-roboto-fonts
 
@@ -30,7 +32,10 @@ A Gtk+ theme based on Material Design Refresh.
 %build
 NOCONFIGURE=1 ./autogen.sh
 
-%configure
+%configure \
+--enable-plank \
+--enable-telegram 
+
 %make_build
 
 
@@ -38,6 +43,7 @@ NOCONFIGURE=1 ./autogen.sh
 rm -rf $RPM_BUILD_ROOT
 %make_install
 
+# symlink duplicate files
 
 %files
 %license COPYING LICENSE_CC_BY_SA4
