@@ -39,12 +39,12 @@ Console RAR supports archives only in RAR format, which names usually have a
 %build
 
 %install
-%{__instal} -D -p -m0755 rar %{buildroot}%{_bindir}/rar
+%{__install} -D -p -m0755 rar %{buildroot}%{_bindir}/rar
 %if %{with unrar}
-%{__instal} -D -p -m0755 unrar %{buildroot}%{_bindir}/unrar
+%{__install} -D -p -m0755 unrar %{buildroot}%{_bindir}/unrar
 %endif
-%{__instal} -D -p -m0644 rarfiles.lst %{buildroot}%{_sysconfdir}/rarfiles.lst
-%{__instal} -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
+%{__install} -D -p -m0644 rarfiles.lst %{buildroot}%{_sysconfdir}/rarfiles.lst
+%{__install} -D -p -m0755 default.sfx %{buildroot}%{_libdir}/default.sfx
 
 %files
 %license license.txt
