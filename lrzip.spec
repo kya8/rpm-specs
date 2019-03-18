@@ -18,7 +18,7 @@
 
 Name:           lrzip
 Version:        0.631
-Release:        5.%{commit_date}git%{shortcommit}%{?dist}
+Release:        6.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        Compression program optimized for large files
 Group:          Applications/File
 # libzpaq:      MIT
