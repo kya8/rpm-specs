@@ -1,5 +1,5 @@
 Name:           compton-next
-Version:        5.1
+Version:        6.2
 Release:        1%{?dist}
 Summary:        A compositor for X11
 
