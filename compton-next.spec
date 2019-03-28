@@ -58,8 +58,8 @@ Compton-next is an active fork of the original compton, a compositor for X11.
 desktop-file-validate %{buildroot}/%{_datadir}/applications/compton.desktop
 
 %files
-%license LICENSES/* COPYING
-%doc README.md compton.sample.conf
+%license LICENSES/* COPYING CONTRIBUTORS
+%doc README_orig.md README.md compton.sample.conf
 %{_bindir}/compton
 %{_bindir}/compton-convgen.py
 %{_bindir}/compton-trans
