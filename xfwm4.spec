@@ -1,10 +1,10 @@
-%global commit 3751c2c716714f84dd3d527b60f3543e96fac54e
-%global commit_date 20190110
+%global commit 24aeee482a218a12a39fc4059b6aa6f7202d6d4e
+%global commit_date 20190316
 %global shortcommit %(c=%{commit};echo ${c:0:7})
 
 Name:           xfwm4
 Version:        4.13.1
-Release:        7.%{commit_date}git%{shortcommit}%{?dist}
+Release:        8.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        Next generation window manager for Xfce
 
 Group:          User Interface/Desktops
@@ -31,7 +31,6 @@ BuildRequires:	libXpresent-devel
 BuildRequires:	libepoxy-devel
 BuildRequires:	libtool
 BuildRequires:	librsvg2
-
 
 Provides:       firstboot(windowmanager) = xfwm4
 
