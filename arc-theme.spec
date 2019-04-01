@@ -2,7 +2,7 @@
 
 
 Name:		arc-theme
-Version:	20190213
+Version:	20190330
 Release:	1%{?dist}
 Summary:	Flat Gtk theme with transparent elements
 
@@ -26,7 +26,7 @@ BuildRequires:	gnome-shell
 
 Requires:	filesystem
 Requires:	gnome-themes-standard
-Requires:   gnome-themes-extra
+Requires: gnome-themes-extra
 Requires:	gtk-murrine-engine
 
 
