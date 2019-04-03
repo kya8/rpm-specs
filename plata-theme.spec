@@ -1,5 +1,5 @@
 Name:           plata-theme
-Version:        0.7.1
+Version:        0.7.2
 Release:        1%{?dist}
 Summary:        A Gtk+ theme based on Material Design Refresh
 
@@ -43,7 +43,6 @@ NOCONFIGURE=1 ./autogen.sh
 rm -rf $RPM_BUILD_ROOT
 %make_install
 
-# symlink duplicate files
 
 %files
 %license COPYING LICENSE_CC_BY_SA4
