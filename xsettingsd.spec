@@ -10,7 +10,10 @@ URL:		https://github.com/derat/xsettingsd
 Source0:	%{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:	gcc-c++
-BuildRequires:	scons libstdc++-devel libX11-devel
+BuildRequires:	scons
+BuildRequires:  libstdc++-devel
+BuildRequires:  pkgconfig(x11)
+
 
 %description
 xsettingsd is a daemon that implements the XSETTINGS specification.
@@ -36,7 +39,7 @@ scons xsettingsd dump_xsettings
 
 %files
 %{_bindir}/*
-%{_mandir}/man1/*
+%{_mandir}/man1/*.1.*
 %doc README COPYING
 
 %changelog
