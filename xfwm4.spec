@@ -39,12 +39,13 @@ xfwm4 is a window manager compatible with GNOME, GNOME2, KDE2, KDE3 and Xfce.
 
 %prep
 %autosetup -n %{name}-%{commit}
-NOCONFIGURE=1 ./autogen.sh # needed for git snapshots
+NOCONFIGURE=1 ./autogen.sh
 
 
 %build
 # "--enable-maintainer-mode" is required for git builds.
 %configure \
+  --disable-static \
   --enable-maintainer-mode \
   --enable-epoxy \
   --enable-startup-notification \
