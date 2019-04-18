@@ -1,10 +1,10 @@
-%global commit 24aeee482a218a12a39fc4059b6aa6f7202d6d4e
-%global commit_date 20190316
+%global commit 8b0257ae9cbdc47d85eac3ddfc45dc7ed02e08f5
+%global commit_date 20190417
 %global shortcommit %(c=%{commit};echo ${c:0:7})
 
 Name:           xfwm4
 Version:        4.13.1
-Release:        8.%{commit_date}git%{shortcommit}%{?dist}
+Release:        9.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        Next generation window manager for Xfce
 
 Group:          User Interface/Desktops
@@ -46,7 +46,6 @@ NOCONFIGURE=1 ./autogen.sh # needed for git snapshots
 # "--enable-maintainer-mode" is required for git builds.
 %configure \
   --enable-maintainer-mode \
-  --disable-static \
   --enable-epoxy \
   --enable-startup-notification \
   --enable-xsync \
@@ -54,7 +53,6 @@ NOCONFIGURE=1 ./autogen.sh # needed for git snapshots
   --enable-randr \
   --enable-xpresent \
   --enable-compositor \
-  --disable-debug
 
 %make_build
 
