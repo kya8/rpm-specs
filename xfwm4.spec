@@ -1,10 +1,10 @@
-%global commit 8b0257ae9cbdc47d85eac3ddfc45dc7ed02e08f5
-%global commit_date 20190417
+%global commit 4769a299f7bb7dd09bc78b97a0604995f68475f5
+%global commit_date 20190422
 %global shortcommit %(c=%{commit};echo ${c:0:7})
 
 Name:           xfwm4
 Version:        4.13.1
-Release:        9.%{commit_date}git%{shortcommit}%{?dist}
+Release:        10.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        Next generation window manager for Xfce
 
 Group:          User Interface/Desktops
