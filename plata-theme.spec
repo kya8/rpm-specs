@@ -1,5 +1,5 @@
 Name:           plata-theme
-Version:        0.7.5
+Version:        0.7.9
 Release:        1%{?dist}
 Summary:        A Gtk+ theme based on Material Design Refresh
 
@@ -34,7 +34,8 @@ NOCONFIGURE=1 ./autogen.sh
 
 %configure \
 --enable-plank \
---enable-telegram 
+--enable-telegram \
+--enable-gtk_next
 
 %make_build
 
