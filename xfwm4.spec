@@ -68,8 +68,8 @@ done
 
 
 %files -f %{name}.lang
-%license COPYING
-%doc README TODO AUTHORS COMPOSITOR
+%license COPYING AUTHORS
+%doc README TODO COMPOSITOR NEWS
 %{_bindir}/xfwm4
 %{_bindir}/xfwm4-settings
 %{_bindir}/xfwm4-tweaks-settings
