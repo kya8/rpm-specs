@@ -7,7 +7,7 @@
 
 Name:           wlroots
 Version:        0.5.0
-Release:        2.%{commit_date}git%{shortcommit}%{?dist}
+Release:        100.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        A modular Wayland compositor library
 
 License:        MIT
