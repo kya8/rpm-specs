@@ -50,7 +50,7 @@ Sway is a tiling window manager supporting Wayland compositor protocol and
 i3-compatible configuration.
 
 %prep
-%autosetup -p 1
+%autosetup -n %{name}-%{commit}
 
 %build
 %meson
@@ -75,7 +75,6 @@ sed -i "s|^output \* bg .*|output * bg /usr/share/backgrounds/f%{fedora}/default
 %{_mandir}/man7/*
 %{_bindir}/sway
 %{_bindir}/swaybar
-%{_bindir}/swaybg
 %{_bindir}/swaymsg
 %{_bindir}/swaynag
 %{_datadir}/wayland-sessions/sway.desktop
