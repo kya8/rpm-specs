@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(wayland-cursor)
 BuildRequires:  pkgconfig(wayland-egl)
 BuildRequires:  pkgconfig(wayland-server)
 BuildRequires:  pkgconfig(wayland-protocols)
-BuildRequires:  pkgconfig(wlroots) >= 0.5.0
+BuildRequires:  pkgconfig(wlroots) >= 0.6.0
 BuildRequires:  wayland-devel
 BuildRequires:  libevdev-devel
 BuildRequires:  git
