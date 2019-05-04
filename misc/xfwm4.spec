@@ -1,5 +1,5 @@
-%global commit deed0d10dbe284304d44271f4240431c4dd2ec47
-%global commit_date 20190502
+%global commit 70832c81246b2590524d3902412875e490f9b2b8
+%global commit_date 20190504
 %global shortcommit %(c=%{commit};echo ${c:0:7})
 
 Name:           xfwm4
