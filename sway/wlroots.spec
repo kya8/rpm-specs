@@ -1,12 +1,12 @@
-%global commit cf3b083c329b4e3ce89d16d77253e30137e86da2
+%global commit 6ae6b5dbb6c4f33f3c8ba12cd889100376d1edd8
 %global shortcommit %(c=%{commit};echo ${c:0:7})
-%global commit_date 20190430
+%global commit_date 20190504
 
 # soname version
 %global abi_ver 2
 
 Name:           wlroots
-Version:        0.5.0
+Version:        0.6.0
 Release:        100.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        A modular Wayland compositor library
 
