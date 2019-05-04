@@ -3,7 +3,7 @@
 %global commit_date 20190504
 
 # soname version
-%global abi_ver 2
+%global abi_ver 3
 
 Name:           wlroots
 Version:        0.6.0
