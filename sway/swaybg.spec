@@ -17,6 +17,8 @@ BuildRequires:  pkgconfig(wayland-protocols)
 BuildRequires:  wayland-devel
 BuildRequires:  scdoc
 
+# was part of sway until 1.1
+Conflicts:	sway < 1.1
 
 %description
 swaybg is a wallpaper utility for Wayland compositors. It is compatible with
