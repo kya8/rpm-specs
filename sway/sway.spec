@@ -1,10 +1,10 @@
-%global commit 32087ad77d393c24360d3210b89b9a85886a8698
+%global commit 51c077798cf06ebd5e27271fb5e276c181f8a077
 %global shortcommit %(c=%{commit};echo ${c:0:7})
 %global commit_date 20190504
 
 Name:           sway
-Version:        1.0
-Release:        100.%{commit_date}git%{shortcommit}%{?dist}
+Version:        1.1
+Release:        0.1.rc1.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        i3-compatible window manager for Wayland
 License:        MIT
 URL:            https://github.com/swaywm/sway
@@ -44,6 +44,7 @@ Recommends:     rxvt-unicode-256color-ml
 # TODO: needs packaging
 # grim is the recommended way to take screenshots on sway 1.0+
 # Recommends:     grim
+Requires:	swaybg
 
 %description
 Sway is a tiling window manager supporting Wayland compositor protocol and
