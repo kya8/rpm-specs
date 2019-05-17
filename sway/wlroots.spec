@@ -1,6 +1,6 @@
-%global commit 6ae6b5dbb6c4f33f3c8ba12cd889100376d1edd8
+%global commit 522ddd93f145533055ab889ef3a540c550c18008
 %global shortcommit %(c=%{commit};echo ${c:0:7})
-%global commit_date 20190504
+%global commit_date 20190515
 
 # soname version
 %global abi_ver 3
