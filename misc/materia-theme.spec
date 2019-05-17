@@ -11,9 +11,8 @@ BuildArch:      noarch
 
 BuildRequires:  bash
 BuildRequires:  bc
-BuildRequires:       %{_bindir}/glib-compile-resources
-Requires:       %{_datadir}/gtk-engines/murrine.xml
 
+Requires:       %{_datadir}/gtk-engines/murrine.xml
 Requires:       gnome-themes-extra
 
 
