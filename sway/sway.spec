@@ -1,6 +1,6 @@
-%global commit 578c1956accf6d06ed827740a9ad59d5ee23437c
+%global commit 00cffb8e20d4bb800134f26dcda8a01afa4467d2
 %global shortcommit %(c=%{commit};echo ${c:0:7})
-%global commit_date 20190515
+%global commit_date 20190523
 
 Name:           sway
 Version:        1.1
