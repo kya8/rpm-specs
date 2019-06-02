@@ -1,10 +1,10 @@
-%global commit 00cffb8e20d4bb800134f26dcda8a01afa4467d2
+%global commit 49258829209347a7aef65f2e38d3eea29a9d45e0
 %global shortcommit %(c=%{commit};echo ${c:0:7})
-%global commit_date 20190523
+%global commit_date 20190530
 
 Name:           sway
 Version:        1.1
-Release:        0.1.rc1.%{commit_date}git%{shortcommit}%{?dist}
+Release:        0.2.rc3.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        i3-compatible window manager for Wayland
 License:        MIT
 URL:            https://github.com/swaywm/sway
