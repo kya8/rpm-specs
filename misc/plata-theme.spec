@@ -1,5 +1,5 @@
 Name:           plata-theme
-Version:        0.8.0
+Version:        0.8.4
 Release:        1%{?dist}
 Summary:        A Gtk+ theme based on Material Design Refresh
 

@@ -1,10 +1,10 @@
-%global commit e30ee407a42311ff67878921a95161e1bc58bbb5
-%global commit_date 20190130
+%global commit 3b53122c812bcfc62e4dfda322272e4cfde72ee9
+%global commit_date 20190603
 %global shortcommit %(c=%{commit};echo ${c:0:7})
 
 Name:           xarchiver
 Version:        0.5.4.14
-Release:        1.%{commit_date}git%{shortcommit}%{?dist}
+Release:        2.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        Archive manager for Xfce
 
 License:        GPLv2+
