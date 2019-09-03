@@ -1,5 +1,5 @@
 Name:           plata-theme
-Version:        0.8.4
+Version:        0.8.9
 Release:        1%{?dist}
 Summary:        A Gtk+ theme based on Material Design Refresh
 
@@ -16,6 +16,7 @@ BuildRequires:  glib2-devel >= 2.48.0
 BuildRequires:  inkscape >= 0.91
 BuildRequires:  sassc >= 3.3
 BuildRequires:  libxml2
+BuildRequires:	pkgconfig(libmarco-private)
 
 # BuildRequires:  fdupes
 
@@ -51,3 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/themes/*
 
 %changelog
+* Tue Sep 03 2019 kas7 - 0.8.9-1
+- New upstream release. Add BR for marco support.
+
