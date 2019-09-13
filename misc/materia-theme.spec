@@ -1,5 +1,5 @@
 Name:           materia-theme
-Version:        20190831
+Version:        20190912
 Release:        1%{?dist}
 Summary:        A Material Design-like theme for GNOME/GTK+ based desktop environments
 
@@ -43,6 +43,9 @@ cd $RPM_BUILD_DIR/%{name}-%{version}
 
 
 %changelog
+* Fri Sep 13 2019 taocris - 20190912-1
+- New upstream release
+
 * Tue Sep 03 2019 kas7 - 20190831-1
 - New upstream release.
 
