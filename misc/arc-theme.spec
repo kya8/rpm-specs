@@ -1,14 +1,26 @@
 %global common_configure --disable-unity --srcdir=..
 
+# build from git snapshot
+%global git_build 1
+
+%if 0%{?git_build}
+%global commit ec6db845a1f1745444366492787c4846385c9543
+%global short_commit %(c=%{commit};echo ${c:0:7})
+%endif
 
 Name:		arc-theme
-Version:	20190330
-Release:	1%{?dist}
+Version:	20190910
+Release:	1%{?git_build:.git%{short_commit}}%{?dist}
 Summary:	Flat Gtk theme with transparent elements
 
 License:	GPLv3+
-URL:		https://github.com/NicoHood/%{name}
+URL:		https://github.com/arc-design/%{name}
+
+%if 0%{?git_build}
+Source0:	%{url}/archive/%{commit}.tar.gz#/%{name}-%{commit}.tar.gz
+%else
 Source0:	%{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+%endif
 
 BuildArch:	noarch
 
@@ -37,7 +49,11 @@ Pantheon, Xfce, MATE, Cinnamon (>=3.4), Budgie Desktop (10.4 for GTK+3.22) etc.
 
 
 %prep
+%if 0%{?git_build}
+%autosetup -n %{name}-%{commit}
+%else
 %autosetup
+%endif
 %{_bindir}/autoreconf -fiv
 
 
