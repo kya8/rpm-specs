@@ -1,7 +1,7 @@
 %global common_configure --disable-unity --srcdir=..
 
 # build from git snapshot
-# %global git_build 1
+#%%global git_build 1
 
 %if 0%{?git_build}
 %global commit ec6db845a1f1745444366492787c4846385c9543
