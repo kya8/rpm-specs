@@ -12,8 +12,9 @@ URL:		https://github.com/derat/xsettingsd
 
 Source0:	%{url}/archive/%{commit}.tar.gz#/%{name}-%{commit}.tar.gz
 
-BuildRequires:	gcc
+BuildRequires:	gcc-c++
 BuildRequires:	scons
+BuildRequires:	libstdc++-devel
 BuildRequires:  pkgconfig(x11)
 
 
