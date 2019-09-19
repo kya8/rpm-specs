@@ -1,17 +1,19 @@
+%global commit 1b2bccaa18fecd15749de92b05d8b3e99088111a
+%global commit_date 20180626
+%global shortcommit %(c=%{commit};echo ${c:0:7})
+
 Name:		xsettingsd
 Version:	1.0.0
-Release:	1%{?dist}
-Summary:	Provides settings to X11 clients via the XSETTINGS specification
+Release:	2.%{commit_date}git%{shortcommit}%{?dist}
+Summary:	a daemon that implements the XSETTINGS specification
 
-Group:		System Environment/Daemons
 License:	BSD
 URL:		https://github.com/derat/xsettingsd
 
-Source0:	%{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:	%{url}/archive/%{commit}.tar.gz#/%{name}-%{commit}.tar.gz
 
-BuildRequires:	gcc-c++
+BuildRequires:	gcc
 BuildRequires:	scons
-BuildRequires:  libstdc++-devel
 BuildRequires:  pkgconfig(x11)
 
 
@@ -25,21 +27,19 @@ want to configure things such as themes, font anti-aliasing/hinting, and UI
 sound effects.
 
 %prep
-%autosetup
+%autosetup -n %{name}-%{commit}
 
 %build
 %set_build_flags
 scons xsettingsd dump_xsettings
 
 %install
-%{__install} -Dm0755 xsettingsd		%{buildroot}%{_bindir}/xsettingsd
-%{__install} -Dm0755 dump_xsettings		%{buildroot}%{_bindir}/dump_xsettings
-%{__install} -Dm0644 xsettingsd.1		%{buildroot}%{_mandir}/man1/xsettingsd.1
-%{__install} -Dm0644 dump_xsettings.1	%{buildroot}%{_mandir}/man1/dump_xsettings.1
+%{__install} -Dm0755 xsettingsd dump_xsettings -t %{buildroot}%{_bindir}/
+%{__install} -Dm0644 xsettingsd.1 dump_xsettings.1 -t %{buildroot}%{_mandir}/man1/
 
 %files
 %{_bindir}/*
-%{_mandir}/man1/*.1.*
+%{_mandir}/man1/*.1*
 %doc README COPYING
 
 %changelog
