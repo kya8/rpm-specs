@@ -1,7 +1,7 @@
 %global common_configure --disable-unity --srcdir=..
 
 # build from git snapshot
-%global git_build 1
+%global git_build 0
 
 %if 0%{?git_build}
 %global commit ec6db845a1f1745444366492787c4846385c9543
@@ -9,7 +9,7 @@
 %endif
 
 Name:		arc-theme
-Version:	20190910
+Version:	20190917
 Release:	1%{?git_build:.git%{short_commit}}%{?dist}
 Summary:	Flat Gtk theme with transparent elements
 
@@ -24,8 +24,7 @@ Source0:	%{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildArch:	noarch
 
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	autoconf, automake
 BuildRequires:  pkg-config
 BuildRequires:	fdupes
 BuildRequires:	gtk3-devel
@@ -33,12 +32,12 @@ BuildRequires:	gtk-murrine-engine
 BuildRequires:	inkscape
 BuildRequires:	optipng
 BuildRequires:	sassc
-# let it detect gnome-shell version. Otherwise use --with-gnome-shell=<version>
+# Allow detecting gnome-shell version. Otherwise use --with-gnome-shell=<version>
 BuildRequires:	gnome-shell
 
 Requires:	filesystem
 Requires:	gnome-themes-standard
-Requires: gnome-themes-extra
+Requires:	gnome-themes-extra
 Requires:	gtk-murrine-engine
 
 
