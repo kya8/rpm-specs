@@ -122,9 +122,10 @@ Summary:	Development files for %{name}
 
 # This package also provides the headers for using musl
 Provides:	%{name}-headers%{?_isa} = %{version}-%{release}
-
 Requires:	%{name}-libc%{?_isa} = %{version}-%{release}
+%if 0%{?fedora} >= 21 || 0%{?rhel} >= 8
 Suggests:	%{name}-libc-static%{?_isa} = %{version}-%{release}
+%endif
 
 %description devel
 musl is a new C standard library to power a new generation
