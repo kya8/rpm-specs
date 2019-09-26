@@ -79,7 +79,7 @@ Version:	1.1.23
 Release:	1%{?dist}
 Summary:	Fully featured lightweight standard C library for Linux
 License:	MIT
-URL:		http://www.musl-libc.org
+URL:		https://www.musl-libc.org
 Source0:	%{url}/releases/%{name}-%{version}.tar.gz
 
 BuildRequires:	gcc, make
