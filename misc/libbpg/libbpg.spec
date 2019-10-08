@@ -53,11 +53,10 @@ developing applications that use %{name}.
 %prep
 %autosetup
 
-%build
-# replace hardcoded flags
-%{__sed} '\?^CFLAGS:=?s?=.*$?=%{build_cflags}? ; \?^LDFLAGS=?s?=.*$?=%{build_ldflags}?' Makefile
 
-%make_build USE_JCTVC=Y
+%build
+%{set_build_flags}
+%make_build USE_JCTVC=Y -e
 
 
 %install
