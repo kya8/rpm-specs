@@ -1,5 +1,6 @@
 # annobin bloats static libs significantly, kill it with fire. Also use -Os.
 %global alt_cflags %(echo "%{optflags}" | sed 's/[^ ]*annobin[^ ]* //; s/-O. /-Os /')
+# TODO: should use "undefine _annotated_build" here
 
 # Use as system libc
 %bcond_with system_libc
