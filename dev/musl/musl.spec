@@ -1,3 +1,6 @@
+# annobin bloats static libs significantly, kill it with fire. Also use -Os.
+%global alt_cflags %(echo "%{optflags}" | sed 's/[^ ]*annobin[^ ]* //; s/-O. /-Os /')
+
 # Use as system libc
 %bcond_with system_libc
 
@@ -75,7 +78,7 @@
 %endif
 
 Name:		musl
-Version:	1.1.23
+Version:	1.1.24
 Release:	1%{?dist}
 Summary:	Fully featured lightweight standard C library for Linux
 License:	MIT
@@ -184,6 +187,9 @@ programs and libraries with musl easily.
 
 
 %build
+# use modified cflags defined earlier
+export CFLAGS="%{alt_cflags}"
+
 %configure --enable-debug --enable-wrapper=all
 %make_build
 
