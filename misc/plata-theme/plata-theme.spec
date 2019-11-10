@@ -1,5 +1,5 @@
 Name:           plata-theme
-Version:        0.8.9
+Version:        0.9.0
 Release:        1%{?dist}
 Summary:        A Gtk+ theme based on Material Design Refresh
 
@@ -16,7 +16,7 @@ BuildRequires:  glib2-devel >= 2.48.0
 BuildRequires:  inkscape >= 0.91
 BuildRequires:  sassc >= 3.3
 BuildRequires:  libxml2
-BuildRequires:	pkgconfig(libmarco-private)
+BuildRequires:	pkgconfig(libmarco-private) >= 1.22.2
 
 # BuildRequires:  fdupes
 
@@ -35,7 +35,6 @@ NOCONFIGURE=1 ./autogen.sh
 
 %configure \
 --enable-plank \
---enable-telegram \
 --enable-gtk_next
 
 %make_build
