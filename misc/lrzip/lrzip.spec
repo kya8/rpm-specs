@@ -1,5 +1,5 @@
-%global commit 79f505165be5524a52fcaaada7aee8a62978fbf9
-%global commit_date 20190224
+%global commit 02a7bdc6c4dbba496d1e31e93926ae9d28f6e89a
+%global commit_date 20191104
 %global shortcommit %(c=%{commit};echo ${c:0:7})
 
 %ifarch %{ix86}
@@ -18,7 +18,7 @@
 
 Name:           lrzip
 Version:        0.631
-Release:        6.%{commit_date}git%{shortcommit}%{?dist}
+Release:        7.%{commit_date}git%{shortcommit}%{?dist}
 Summary:        Compression program optimized for large files
 Group:          Applications/File
 # libzpaq:      MIT
