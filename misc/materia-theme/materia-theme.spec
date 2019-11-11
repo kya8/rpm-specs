@@ -1,5 +1,5 @@
 Name:           materia-theme
-Version:        20190912
+Version:        20191017
 Release:        1%{?dist}
 Summary:        A Material Design-like theme for GNOME/GTK+ based desktop environments
 
@@ -12,7 +12,7 @@ BuildArch:      noarch
 BuildRequires:  bash
 BuildRequires:  bc
 
-Requires:       %{_datadir}/gtk-engines/murrine.xml
+Requires:       gtk-murrine-engine
 Requires:       gnome-themes-extra
 
 
@@ -43,10 +43,3 @@ cd $RPM_BUILD_DIR/%{name}-%{version}
 
 
 %changelog
-* Fri Sep 13 2019 taocris - 20190912-1
-- New upstream release
-
-* Tue Sep 03 2019 kas7 - 20190831-1
-- New upstream release.
-
-
