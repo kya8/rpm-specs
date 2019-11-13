@@ -8,7 +8,7 @@
 
 Name:           rar
 Summary:        Command line tools to create and manage RAR archives
-Version:        5.7.0
+Version:        5.7.1
 Release:        1%{?dist}
 License:        Proprietary
 URL:            https://www.rarlab.com
