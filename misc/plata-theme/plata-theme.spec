@@ -1,5 +1,5 @@
 Name:           plata-theme
-Version:        0.9.0
+Version:        0.9.1
 Release:        1%{?dist}
 Summary:        A Gtk+ theme based on Material Design Refresh
 
@@ -51,6 +51,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/themes/*
 
 %changelog
-* Tue Sep 03 2019 kas7 - 0.8.9-1
-- New upstream release. Add BR for marco support.
-
