@@ -1,6 +1,6 @@
 Name:           matcha-theme
-Version:        20191102
-%global upstream_version 2019-11-02
+Version:        20200206
+%global upstream_version 2020-02-06
 Release:        1%{?dist}
 Summary:	A flat Design theme for GTK 3, GTK 2 and Gnome-Shell 
 
