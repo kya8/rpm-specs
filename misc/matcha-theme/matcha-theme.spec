@@ -18,7 +18,7 @@ GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon,
 XFCE, Mate, etc.
 
 %prep
-%autosetup -n matcha-%{upstream_version}
+%autosetup -n Matcha-gtk-theme-%{upstream_version}
 
 %build
 
