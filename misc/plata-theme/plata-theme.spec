@@ -13,7 +13,7 @@ BuildRequires:  autoconf, automake
 BuildRequires:  pkg-config
 BuildRequires:  gdk-pixbuf2-devel >= 2.32.2
 BuildRequires:  glib2-devel >= 2.48.0
-BuildRequires:  inkscape >= 0.91, inkscape < 1.0
+BuildRequires:  inkscape < 1.0
 BuildRequires:  sassc >= 3.3
 BuildRequires:  libxml2
 BuildRequires:	pkgconfig(libmarco-private) >= 1.22.2
