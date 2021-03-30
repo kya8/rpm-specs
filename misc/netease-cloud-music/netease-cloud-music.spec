@@ -7,14 +7,12 @@ Summary:        Netease Cloud Music client
 License:        EULA
 URL:            https://music.163.com/
 Source0:        https://packages.deepin.com/deepin/pool/main/n/%{name}/%{name}_%{version}_amd64.deb
-Source1:        %{name}.appdata.xml
-Source2:        https://music.163.com/html/web2/service.html
+Source1:        https://music.163.com/html/web2/service.html
 
 ExclusiveArch:  x86_64
 
 BuildRequires:  dpkg
 BuildRequires:  desktop-file-utils
-BuildRequires:  libappstream-glib
 
 Requires:       desktop-file-utils
 Requires:       gstreamer1-plugins-ugly
@@ -34,11 +32,9 @@ cp %{S:2} %{_builddir}
 install -Dm755 %{name} %{buildroot}%{_bindir}/%{name}
 install -Dm644 %{name}.desktop %{buildroot}%{_datadir}/applications/%{name}.desktop
 install -Dm644 %{name}.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
-install -Dm644 %{S:1} %{buildroot}%{_metainfodir}/%{name}.appdata.xml
 
 %check
 desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
-appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.appdata.xml
 
 %files
 %doc README.md changelog.gz
@@ -46,6 +42,5 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.appdata.xml
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
-%{_metainfodir}/%{name}.appdata.xml
 
 %changelog
