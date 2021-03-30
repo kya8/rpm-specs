@@ -23,7 +23,7 @@ Netease Cloud Music client, converted from official deb package.
 %prep
 dpkg -X %{S:0} .
 find usr -type f -exec mv {} . \;
-cp %{S:2} %{_builddir}
+cp %{S:1} %{_builddir}
 
 %build
 # nothing to build
